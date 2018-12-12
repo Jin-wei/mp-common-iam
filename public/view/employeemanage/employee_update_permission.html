@@ -1,0 +1,22 @@
+<div>
+    <div class="template">
+        <div class="template-title">
+            <span class="template-title-text">{{'update_permission'|translate}}/UPDATE</span>
+            <ul class="breadcrumb" id="breadcrumb">
+                <li><a href="index.html#/role_list">{{'role_list'|translate}}</a></li>
+                <li>{{'permission'|translate}}</li>
+            </ul>
+        </div>
+        <div style="margin-top: 20px;margin-bottom: 20px">
+            <div class="col-md-2" style="margin-top: 5px" ng-repeat="p in permissionsList">
+                <input type="checkbox" name="ccccc" id="{{p.id}}" value="{{p.id}}"><label style="margin-left: 5px" for="{{p.id}}">{{p.description}}</label>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+    </div>
+    <div style="width: 100%;margin-top: 20px;padding-right: 20px">
+        <input type="checkbox" id="allSelect"><label style="margin-left: 5px" for="allSelect">{{'select_all'|translate}}</label>
+        <button class="btn btn-sm btn-default" style="width: 70px" ng-click="cancleClick()">{{'cancel'|translate}}</button>
+        <button class="btn btn-sm btn-default" style="width: 70px" ng-click="submitClick()">{{'submit'|translate}}</button>
+    </div>
+</div>

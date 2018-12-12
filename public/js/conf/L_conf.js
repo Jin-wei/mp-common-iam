@@ -1,0 +1,4 @@
+
+var conf={
+    lang:'@@lang'
+}

@@ -1,0 +1,34 @@
+<div>
+    <div class="row">
+        <div class="col-md-4">
+            <button class="btn btn-sm btn-default" style="margin-left: 20px" ng-click="addTenant()">{{'add_project'|translate}}</button>
+        </div>
+    </div>
+    <div >
+        <div class="col-md-12" style="margin-top: 20px">
+            <table class="table table-bordered table-customer" style="border: 1px solid #ddd; ">
+                <thead>
+                    <tr>
+                        <th>{{'object'|translate}}</th>
+                        <th>{{'project_description'|translate}}</th>
+                        <th>{{'register_time'|translate}}</th>
+                        <th>{{'update_time'|translate}}</th>
+                        <th>{{'operation'|translate}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="tenant in tenantList" ng-if="tenant.tenant !=='0000000000'">
+                        <td>{{tenant.tenant}}</td>
+                        <td>{{tenant.description}}</td>
+                        <td>{{tenant.created_on | dateFormat}}</td>
+                        <td>{{tenant.updated_on | dateFormat}}</td>
+                        <td>
+                            <button ng-click="editTenant(tenant)"  class="btn btn-sm btn-default">{{'edit'|translate}}</button>
+                            <button ng-click="deleteTenant(tenant)" class="btn btn-sm btn-default">{{'submit'|translate}}</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

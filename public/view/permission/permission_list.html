@@ -1,0 +1,38 @@
+<div>
+    <div class="row">
+        <div class="col-md-4">
+            <button class="btn btn-sm btn-default" style="margin-left: 20px" ng-click="adduserPermissions()">{{'add_user_permission'|translate}}</button>
+        </div>
+    </div>
+    <div class="col-md-12" style="top:20px; left:5px;">
+        <table class="table table-bordered table-customer" style="border: 1px solid #ddd; ">
+            <thead>
+                <tr>
+                    <!--<th>{{'serial_number'|translate}}</th>-->
+                    <th>{{'permission_name'|translate}}</th>
+                    <th>{{'permission_description'|translate}}</th>
+                    <th>{{'last_modified_time'|translate}}</th>
+                    <th>{{'operation'|translate}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="permission in permissionsList">
+                    <!--<td>{{$index+1}}</td>-->
+                    <td>{{permission.name}}<span style="float: right" ng-show="permission.system_flag == 1" class="glyphicon glyphicon-user"></span></td>
+                    <td>{{permission.description}}</td>
+                    <td>{{permission.updated_on | dateFormat}}</td>
+                    <td >
+                        <button ng-show="permission.system_flag == 0" ng-click="showPermiInfo(permission)"  class="btn btn-sm btn-default">{{'edit'|translate}}</button>
+                        <button ng-show="permission.system_flag != 0"  disabled class="btn btn-sm btn-default">{{'edit'|translate}}</button>
+                        <button ng-show="permission.system_flag == 0" ng-click="deletePermission(permission)" class="btn btn-sm btn-default">{{'delete'|translate}}</button>
+                        <button ng-show="permission.system_flag != 0"  disabled class="btn btn-sm btn-default">{{'delete'|translate}}</button>
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+    <div class="col-md-12" align="right" style="margin-top: 20px">
+        <table-page></table-page>
+    </div>
+</div>

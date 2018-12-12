@@ -1,0 +1,180 @@
+<div>
+    <div class="panel panel-info">
+        <div class="panel-header" style="background-color: #3a92ab; height: 40px; margin-top: 0px">
+            <h4 style="margin-top: 0px;">{{'employee_information'|translate}}</h4>
+        </div>
+        <div class="panel-body">
+             <div>
+                 <form class="form-horizontal col-md-11">
+                     <div class="form-group">
+                         <label class="col-md-5" style="text-align: right;padding-right: 0px; top:8px;"><require></require>{{'name'|translate}}</label>
+                         <div class="col-md-4">
+                             <input style="height: 35px; width: 277px;" type="text" placeholder="{{'please_enter_name'|translate}}" ng-model="name" required>
+
+                         </div>
+                     </div>
+                     <div class="form-group">
+                         <label class="col-md-5" style="text-align: right;padding-right: 0px; top:8px;"><require></require>{{'username'|translate}}</label>
+                         <div class="col-md-4">
+                             <input style="height: 35px; width: 277px;" type="text" placeholder="{{'please_enter_username'|translate}}" ng-model="userName" required>
+
+                         </div>
+                      </div>
+                     <!--<div class="form-group">-->
+                         <!--<label class="col-md-5" style="text-align: right;padding-right: 0px; top:8px;"><require></require>用户角色</label>-->
+                         <!--<div class="col-md-4">-->
+                             <!--<select class="form-control" ng-model="userRole" >-->
+                                 <!--<option value="">&#45;&#45;请选择用户角色&#45;&#45;</option>-->
+                                 <!--<option ng-repeat=" r in roleList">{{r.name}}</option>-->
+                             <!--</select>-->
+                         <!--</div>-->
+                     <!--</div>-->
+                     <div class="form-group">
+                         <label class="col-md-5" style="text-align: right;padding-right: 0px; top:8px;">{{'phone'|translate}}</label>
+                         <div class="col-md-4">
+                             <input style="height: 35px; width: 277px; " type="text" placeholder="{{'please_enter_phone'|translate}}" ng-model="userPhone" required>
+                         </div>
+                     </div>
+                     <div class="form-group">
+                         <label class="col-md-5" style="text-align: right;padding-right: 0px; top:8px;">{{'password'|translate}}</label>
+                         <div class="col-md-4">
+                             <input style="height: 35px; width: 277px; " type="text" placeholder="{{'please_enter_password'|translate}}" ng-model="password" required>
+                         </div>
+                     </div>
+                     <div class="form-group">
+                         <label class="col-md-5" style="text-align: right;padding-right: 0px; top:8px;">{{'confirm_password'|translate}}</label>
+                         <div class="col-md-4">
+                             <input style="height: 35px; width: 277px; " type="text" placeholder="{{'please_enter_again_password'|translate}}" ng-model="againPassword" required>
+                         </div>
+                     </div>
+                     <div class="form-group">
+                         <label class="col-md-5" style="text-align: right;padding-right: 0px; top:8px;">{{'email'|translate}}</label>
+                         <div class="col-md-4">
+                             <input style="height: 35px; width: 277px; " type="text" placeholder="{{'please_enter_email'|translate}}" ng-model="email">
+                         </div>
+                     </div>
+                     <div class="form-group">
+                         <label class="col-md-5" style="text-align: right;padding-right: 0px; top:8px;">{{'gender'|translate}}</label>
+                         <div class="col-md-4">
+                             <lable class="radio">
+                                     &nbsp;&nbsp;&nbsp;&nbsp;
+                                 <input type="radio" name="radio" ng-model="gender" value="1">{{'male'|translate}} &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                                 <input type="radio" name="radio"  ng-model="gender" value="0">{{'female'|translate}}
+                             </lable>
+                         </div>
+                     </div>
+                     <div class="form-group">
+                         <label class="col-md-5" style="text-align: right;padding-right: 0px; top:8px;">{{'avater'|translate}}</label>
+                         <div class="col-md-4">
+                             <input style="height: 35px; width: 277px; " type="text" placeholder="{{'please_enter_avater'|translate}}" ng-model="avatar">
+                         </div>
+                     </div>
+
+
+                     <div class="form-group">
+                         <label class="col-md-5" style="text-align: right;padding-right: 0px; top:8px;">{{'status'|translate}}</label>
+                         <div class="col-md-4">
+                             <select class="search-select" style="height: 35px; width: 277px; " ng-model="status">
+                                 <option value="0">{{'disable'|translate}}</option>
+                                 <option value="1">{{'enable'|translate}}</option>
+                             </select>
+                         </div>
+                     </div>
+                     <div class="form-group">
+                         <label class="col-md-5" style="text-align: right;padding-right: 0px; top:8px;">{{'type'|translate}}</label>
+                         <div class="col-md-4">
+                             <select class="search-select" style="height: 35px; width: 277px; " ng-model="type">
+                                 <option value="user">{{'user'|translate}}</option>
+                                 <option value="internal">{{'admin_manager'|translate}}</option>
+                                 <option value="system">{{'system_manager'|translate}}</option>
+                                 <option value="supplier">{{'supplier'|translate}}</option>
+                             </select>
+                         </div>
+                     </div>
+                     <div class="form-group">
+                         <label class="col-md-5" style="text-align: right;padding-right: 0px; top:8px;">{{'business_id'|translate}}</label>
+                         <div class="col-md-4">
+                             <input style="height: 35px; width: 277px; " type="text" placeholder="{{'please_enter_business_id'|translate}}" ng-model="bizId">
+                         </div>
+                     </div>
+                     <div class="form-group">
+                         <label class="col-md-5" style="text-align: right;padding-right: 0px; top:8px;">{{'business'|translate}}</label>
+                         <div class="col-md-4">
+                             <input style="height: 35px; width: 277px; " type="text" placeholder="{{'please_enter_business'|translate}}" ng-model="bizName">
+                         </div>
+                     </div>
+                     <div class="form-group">
+                         <label class="col-md-5" style="text-align: right;padding-right: 0px; top:8px;">{{'custom_one'|translate}}</label>
+                         <div class="col-md-4">
+                             <input style="height: 35px; width: 277px; " type="text" placeholder="{{'please_enter_custom_one'|translate}}" ng-model="att1String">
+                         </div>
+                     </div>
+                     <div class="form-group">
+                         <label class="col-md-5" style="text-align: right;padding-right: 0px; top:8px;">{{'custom_two'|translate}}</label>
+                         <div class="col-md-4">
+                             <input style="height: 35px; width: 277px; " type="text" placeholder="{{'please_enter_custom_two'|translate}}" ng-model="att2String">
+                         </div>
+                     </div>
+                     <div class="form-group">
+                         <label class="col-md-5" style="text-align: right;padding-right: 0px; top:8px;">{{'custom_three'|translate}}</label>
+                         <div class="col-md-4">
+                             <input style="height: 35px; width: 277px; " type="text" placeholder="{{'please_enter_custom_three'|translate}}" ng-model="att3String">
+                         </div>
+                     </div>
+                     <div class="form-group">
+                         <label class="col-md-5" style="text-align: right;padding-right: 0px; top:8px;">{{'ID'|translate}}</label>
+                         <div class="col-md-4">
+                             <input style="height: 35px; width: 277px; " type="text" placeholder="{{'please_enter_ID'|translate}}" ng-model="ssn">
+                         </div>
+                     </div>
+                     <div class="form-group">
+                         <label class="col-md-5" style="text-align: right;padding-right: 0px; top:8px;">{{'province'|translate}}</label>
+                         <div class="col-md-4">
+                             <input style="height: 35px; width: 277px; " type="text" placeholder="{{'please_enter_province'|translate}}" ng-model="state">
+                         </div>
+                     </div>
+                     <div class="form-group">
+                         <label class="col-md-5" style="text-align: right;padding-right: 0px; top:8px;">{{'city'|translate}}</label>
+                         <div class="col-md-4">
+                             <input style="height: 35px; width: 277px; " type="text" placeholder="{{'please_enter_city'|translate}}" ng-model="city">
+                         </div>
+                     </div>
+                     <div class="form-group">
+                         <label class="col-md-5" style="text-align: right;padding-right: 0px; top:8px;">{{'address'|translate}}</label>
+                         <div class="col-md-4">
+                             <input style="height: 35px; width: 277px; " type="text" placeholder="{{'please_enter_address'|translate}}" ng-model="address">
+                         </div>
+                     </div>
+                     <div class="form-group">
+                         <label class="col-md-5" style="text-align: right;padding-right: 0px; top:8px;">{{'zip_code'|translate}}</label>
+                         <div class="col-md-4">
+                             <input style="height: 35px; width: 277px; " type="text" placeholder="{{'please_enter_zip_code'|translate}}" ng-model="zipcode">
+                         </div>
+                     </div>
+                     <div class="form-group">
+                         <label class="col-md-5" style="text-align: right;padding-right: 0px; top:8px;">{{'wechat_id'|translate}}</label>
+                         <div class="col-md-4">
+                             <input style="height: 35px; width: 277px; " type="text" placeholder="{{'please_enter_wechat_id'|translate}}" ng-model="wechatId">
+                         </div>
+                     </div>
+                     <div class="form-group">
+                         <label class="col-md-5" style="text-align: right;padding-right: 0px; top:8px;">{{'wechat_status'|translate}}</label>
+                         <div class="col-md-4">
+                             <select class="search-select" style="height: 35px; width: 277px; " ng-model="wechatStatus">
+                                 <option value="0">{{'disable'|translate}}</option>
+                                 <option value="1">{{'enable'|translate}}</option>
+                             </select>
+                         </div>
+                     </div>
+                     <div class="row">
+                         <div class="col-md-7" align="right">
+                             <a class="btn btn-sm btn-success" ng-click="cancel()">{{'cancel'|translate}}</a>
+                             <button type="submit" id="submitId" class="btn btn-sm btn-success " ng-click="onRegister(userRole)">{{'submit'|translate}}</button>
+                         </div>
+                     </div>
+                 </form>
+             </div>
+        </div>
+
+    </div>
+</div>

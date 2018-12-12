@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="admin_module" >
+<head>
+    <meta charset="UTF-8">
+    <title>Common-iam管理平台</title>
+    <link rel="shortcut icon" href="./assets/images/icon.ico"/>
+    <link href="/assets/plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+<style>
+    body {
+        background-image: url("./assets/images/bg.jpg");
+        background-repeat: no-repeat ;
+    }
+</style>
+<body class="pace-top bg-white">
+<div>
+    <!--div class="news-caption">
+        <h4 class="caption-title"><i class="fa fa-diamond"></i>Common-iam管理平台</h4>
+    </div-->
+
+    <div ng-view></div>
+
+
+</div>
+
+<script src="/js/lib/jquery.min.js"></script>
+<script src="/js/lib/jquery.form.js"></script>
+<script src="/js/lib/jquery.cookie.min.js"></script>
+<script src="/assets/plugins/bootstrap/js/bootstrap.js"></script>
+
+
+<script src="/js/lib/angular-1.4.3/angular.js"></script>
+<script src="/js/lib/angular-1.4.3/angular-route.min.js"></script>
+<script src="/js/lib/angular-translate.min.js"></script>
+<script src="/js/lib/angular-translate-loader-static-files.min.js"></script>
+<script src="/assets/js/jquery.dataTables.js"></script>
+<script src="/assets/js/angular-datatables.js"></script>
+<script src="/js/conf/conf.js"></script>
+<script src="/module/admin_module.js"></script>
+<script src="/service/base_service.js"></script>
+<script src="/service/route_service.js"></script>
+<script src="/service/http_service.js"></script>
+
+<script src="/controller/login_controller.js"></script>
+
+</body>
+</html>

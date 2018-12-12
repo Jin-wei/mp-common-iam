@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="admin_module">
+<head>
+    <meta charset="UTF-8">
+    <title>{{'iam_management_platform'|translate}}</title>
+    <meta content="注册登录" name="description" />
+    <link rel="shortcut icon" href="./assets/images/icon.ico"/>
+
+    <link href="/assets/plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/assets/css/index.css" rel="stylesheet">
+</head>
+<body>
+
+<div id="page-container" class="fade page-sidebar-fixed page-header-fixed in">
+    <header></header>
+    <div id="sidebar" class="sidebar">
+        <div id="menuId" data-scrollbar="true" data-height="100%">
+            <ul class="nav">
+                <li class="nav-profile">
+                    <div class="info" id="name">
+                        {{username}}
+                        <small>{{'welcome_to_the_background_management_system'|translate}}</small>
+                    </div>
+                </li>
+            </ul>
+            <ul class="nav">
+
+                <li class="has-sub" ng-show="adminTenant !=='0000000000'">
+                    <a href="index.html#/employeeList">
+                        <span>{{'user_list'|translate}}</span>
+                    </a>
+                </li>
+
+                <li  class="has-sub" ng-show="adminTenant !=='0000000000'">
+                    <a href="index.html#/user_permission">
+                        <span>{{'permission_list'|translate}}</span>
+                    </a>
+                </li>
+
+                <li  class="has-sub" ng-show="adminTenant !=='0000000000'">
+                    <a href="index.html#/role_list">
+                        <span>{{'role_list'|translate}}</span>
+                    </a>
+                </li>
+
+                <li  class="has-sub" ng-show="adminTenant=='0000000000'">
+                    <a href="index.html#/tenant_list">
+                        <span> {{'project_list'|translate}}</span>
+                    </a>
+                </li>
+
+                <li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="fa fa-angle-double-left"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="content" class="content">
+        <div ng-view></div>
+    </div>
+</div>
+
+
+<script src="/js/lib/jquery.min.js"></script>
+<script src="/js/lib/jquery.form.js"></script>
+<script src="/js/lib/jquery.cookie.min.js"></script>
+<script src="/assets/plugins/bootstrap/js/bootstrap.js"></script>
+
+
+<script src="/js/lib/angular-1.4.3/angular.js"></script>
+<script src="/js/lib/angular-1.4.3/angular-route.min.js"></script>
+<script src="/js/lib/angular-translate.min.js"></script>
+<script src="/js/lib/angular-translate-loader-static-files.min.js"></script>
+<script src="/assets/js/jquery.dataTables.js"></script>
+<script src="/assets/js/angular-datatables.js"></script>
+<script src="/js/conf/conf.js"></script>
+
+<script src="/module/admin_module.js"></script>
+<script src="/service/base_service.js"></script>
+<script src="/service/route_service.js"></script>
+<script src="/service/http_service.js"></script>
+<script src="/service/directive_service.js"></script>
+<script src="/service/filter_service.js"></script>
+<script src="/service/passObj_service.js"></script>
+
+<script src="/controller/configure_menu_controller.js"></script>
+<script src="/controller/home_controller.js"></script>
+<script src="/controller/employee_list_controller.js"></script>
+<script src="/controller/employee_add_controller.js"></script>
+<script src="/controller/user_info_controller.js"></script>
+<script src="/controller/permission_controller.js"></script>
+<script src="/controller/permission_add_controller.js"></script>
+<script src="/controller/permission_update_controller.js"></script>
+<script src="/controller/role_list_controller.js"></script>
+<script src="/controller/role_add_controller.js"></script>
+<script src="/controller/role_update_controller.js"></script>
+<script src="/controller/tenant_list_controller.js"></script>
+<script src="/controller/tenant_add_controller.js"></script>
+<script src="./controller/employee_update_permission_controller.js"></script>
+<script src="./controller/tenant_update_controller.js"></script>
+<script src="./controller/employee_assign_role_controller.js"></script>
+
+</body>
+</html>

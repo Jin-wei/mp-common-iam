@@ -1,0 +1,73 @@
+/**
+ * Created by liling on 11/30/16.
+ */
+
+app.config(['$routeProvider', function ($routeProvider) {
+   
+    $routeProvider
+        .when('/',{
+            templateUrl:'/view/login/login_content.html',
+            controller:'loginController'
+        })
+        .when('/configMenu',{
+            templateUrl:'/view/main.html',
+            controller:'configureMenuController'
+        })
+        .when('/employeeList',{
+            templateUrl:'/view/employeemanage/employee_list.html',
+            controller:'employeeListController'
+        })
+        .when('/employee_add',{
+            templateUrl:'/view/employeemanage/employee_add.html',
+            controller:'employeeAddController'
+        })
+        .when('/user_info_detail',{
+            templateUrl:'/view/usermanage/user_info_detail.html',
+            controller:'userInfoController'
+        })
+        .when('/user_permission',{
+            templateUrl:'/view/permission/permission_list.html',
+            controller:'permissionController'
+        })
+        .when('/permission_add',{
+            templateUrl:'/view/permission/permission_add.html',
+            controller:'permissionAddController'
+        })
+        .when('/permission_update',{
+            templateUrl:'/view/permission/permission_update.html',
+            controller:'permissionUpdateController'
+        })
+        .when('/role_list',{
+            templateUrl:'/view/roleManage/role_list.html',
+            controller:'roleController'
+        })
+        .when('/role_add',{
+            templateUrl:'/view/roleManage/role_add.html',
+            controller:'roleaddController'
+        })
+        .when('/role_update',{
+            templateUrl:'/view/roleManage/role_update.html',
+            controller:'roleUpdateController'
+        })
+        .when('/tenant_list',{
+            templateUrl:'/view/tenant/tenant_list.html',
+            controller:'tenantListController'
+        })
+        .when('/tenant_add',{
+            templateUrl:'/view/tenant/tenant_add.html',
+            controller:'addTenantController'
+        })
+        .when('/update_permission',{
+            templateUrl:'/view/employeemanage/employee_update_permission.html',
+            controller:'updatePermissionController'
+        }).when('/update_tenant',{
+            templateUrl:'/view/tenant/tenant_update.html',
+            controller:'tenantUpdateController'
+        }).when('/employee_assign_role',{
+            templateUrl:'/view/employeemanage/employee_assign_role.html',
+            controller:'employeeAssignRoleController'
+        })
+        .otherwise({
+            templateUrl:'/view//NotFound.html'
+        });
+}])

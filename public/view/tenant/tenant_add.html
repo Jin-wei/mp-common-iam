@@ -1,0 +1,44 @@
+<div>
+    <div class="panel panel-info">
+        <div class="panel-header" style="background-color: #3a92ab; height: 40px; margin-top: 0px">
+            <h4 style="margin-top: 0px;">{{'project_information'|translate}}</h4>
+        </div>
+        <div class="panel-body">
+            <div>
+                <form class="form-horizontal col-md-11">
+                    <div class="form-group">
+                        <label class="col-md-5" style="text-align: right;padding-right: 0px; top:8px;">{{'name'|translate}}</label>
+                        <div class="col-md-4">
+                            <input style="height: 35px; width: 277px; " type="text" placeholder="{{'please_enter_project_name'|translate}}" ng-model="name" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-5" style="text-align: right;padding-right: 0px; top:8px;">{{'description'|translate}}</label>
+                        <div class="col-md-4">
+                            <input style="height: 35px; width: 277px; " type="text" placeholder="{{'please_enter_description'|translate}}" ng-model="description" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-5" style="text-align: right;padding-right: 0px; top:8px;">{{'username'|translate}}</label>
+                        <div class="col-md-4">
+                            <input style="height: 35px; width: 277px; " type="text" placeholder="{{'please_enter_username'|translate}}" ng-model="adminUserName" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-5" style="text-align: right;padding-right: 0px; top:8px;">{{'password'|translate}}</label>
+                        <div class="col-md-4">
+                            <input style="height: 35px; width: 277px; " type="text" placeholder="{{'please_enter_password'|translate}}" ng-model="adminPassword" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8" align="right">
+                            <a class="btn btn-sm btn-success" ng-click="cancel()">{{'cancel'|translate}}</a>
+                            <button type="submit" id="submitId" class="btn btn-sm btn-success " ng-click="addTenant()">{{'submit'|translate}}</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>

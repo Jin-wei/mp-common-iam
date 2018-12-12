@@ -1,0 +1,36 @@
+<div style="float:right; width:500px; margin-top:100px;">
+    <div style="padding:0px 40px;">
+        <div style="color:#707478; font-size: 28px;top:-9px;margin-right: 10px;padding:0px;">
+            <span style="text-transform: capitalize">{{'user_login'|translate}}</span>
+            <small style="font-size: 14px; display: block">{{"welcome_to_use_commoniam_platform"|translate}}</small>
+        </div>
+        <div style="position:absolute; right: 40px;top:80px;opacity:0.1;font-size:70px;">
+            <i class="fa fa-sign-in"></i>
+        </div>
+    </div>
+
+    <div style=" padding:20px 40px;">
+        <form class="margin-bottom-0">
+            <div class="form-group">
+                <select class="form-control input-lg" ng-model="tenant"  ng-options="t.description for t in tenantList track by t.tenant" >
+                    <option value="" disabled>{{'please_select_project'|translate}}</option>
+
+
+                </select>
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control input-lg" placeholder="{{'please_enter_username'|translate}}" ng-model="username" >
+            </div>
+
+            <div class="form-group">
+                <input type="password" class="form-control input-lg" placeholder="{{'please_enter_password'|translate}}" ng-model="password">
+            </div>
+
+            <div>
+                <button type="submit" class="btn btn-success btn-block btn-lg" ng-click="onLogin(tenant)"><span style="text-transform: uppercase">{{'login'|translate}}</span></button>
+            </div>
+        </form>
+    </div>
+
+</div>

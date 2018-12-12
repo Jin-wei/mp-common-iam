@@ -1,0 +1,39 @@
+<div>
+    <div class="row">
+        <div class="col-md-4">
+            <button class="btn btn-sm btn-default" style="margin-left: 20px" ng-click="adduserRole()">{{'add_role'|translate}}</button>
+        </div>
+    </div>
+    <div class="col-md-12" style="top:20px; left:5px;">
+        <table class="table table-bordered table-customer">
+            <thead>
+                <tr>
+                    <!--<th>{{'serial_number'|translate}}</th>-->
+                    <th>{{'role'|translate}}</th>
+                    <th>{{'role_description'|translate}}</th>
+                    <th>{{'last_modified_time'|translate}}</th>
+                    <th>{{'operation'|translate}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="role in roleList">
+                    <!--<td>{{$index+1}}</td>-->
+                    <td>{{role.name}} <span style="float: right" ng-show="role.system_flag == 1" class="glyphicon glyphicon-user"></span> </td>
+                    <td>{{role.description}}</td>
+                    <td>{{role.updated_on | dateFormat}}</td>
+                    <td>
+                        <button ng-show="role.system_flag != 1" ng-click="showroleInfo(role)" class="btn btn-sm btn-default">{{'edit'|translate}}</button>
+                        <button ng-show="role.system_flag == 1" class="btn btn-sm btn-default" disabled>{{'edit'|translate}}</button>
+                        <button ng-show="role.system_flag != 1" ng-click="deleterRoleInfo(role)" class="btn btn-sm btn-default">{{'delete'|translate}}</button>
+                        <button ng-show="role.system_flag == 1" class="btn btn-sm btn-default" disabled>{{'delete'|translate}}</button>
+                        <button class="btn btn-sm btn-default" ng-click="updateRolePermisson(role)">{{'assign_permission'|translate}}</button>
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+    <div class="col-md-12" align="right" style="margin-top: 20px">
+        <table-page></table-page>
+    </div>
+</div>
